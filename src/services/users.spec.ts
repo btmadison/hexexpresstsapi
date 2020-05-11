@@ -13,7 +13,7 @@ describe('Users', () => {
         instance = new UsersService(db);
     });
 
-    it('should get all users as an array', async () => {
+    it('should get all users as an array with DB_ stripped off id', async () => {
         expect(instance).toBeInstanceOf(UsersService);
         const allUsers = await instance.getAll();
         expect(allUsers).toBeDefined();
