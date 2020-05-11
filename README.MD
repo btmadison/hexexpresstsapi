@@ -42,9 +42,14 @@ To go further with the pattern (not in this current example), the User Service c
 Jest is set up for
 
 ## Local Setup to run the example API
-First, clone repo and run npm install from project root.  After this, create a folder called env with a .env file in it, with the following contents:
+First, clone repo and run npm install from project root.  After this, create a .env file in it, with the following contents (or set the environment variables as follows):
 ```
 NODE_ENV=development
+BASE_URL=http://localhost
 SERVER_PORT=8080
 ```
+
+### Commands:
+- run `npm run dev` to run dev server with live reload
+- run `npm run test` to run unit tests
 
