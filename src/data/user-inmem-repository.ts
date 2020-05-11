@@ -1,5 +1,5 @@
-import { UserRepository } from '../models/user/user-repository';
 import { User } from '../models/user/user';
+import { UserRepository } from '../models/user/user-repository';
 
 export class UserInMemoryData implements UserRepository {
   private users: User[];

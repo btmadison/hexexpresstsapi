@@ -1,7 +1,8 @@
-import { UsersService } from '../services/users';
-import { UserRepository } from '../models/user/user-repository';
+import { Request, Response } from 'express';
+
 import { UserInMemoryData } from '../data/user-inmem-repository';
-import { Response, Request } from 'express';
+import { UserRepository } from '../models/user/user-repository';
+import { UsersService } from '../services/users';
 
 export class UserController {
   private userSvc: UsersService;

@@ -1,12 +1,12 @@
-import { UsersService } from './users';
 import { UserInMemoryData } from '../data/user-inmem-repository';
-import { IUserRepository } from '../models/user/user-repository';
+import { UserRepository } from '../models/user/user-repository';
+import { UsersService } from './users';
 
 jest.mock('../data/user-inmem-repository');
 
 describe('Users', () => {
   let instance: UsersService;
-  let db: IUserRepository;
+  let db: UserRepository;
 
   beforeEach(() => {
     db = new UserInMemoryData();
