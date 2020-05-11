@@ -1,7 +1,7 @@
-import dotenv from "dotenv";
-import express from "express";
-import cors from "cors";
-import { registerRoutes } from "./routes/api";
+import dotenv from 'dotenv';
+import express from 'express';
+import cors from 'cors';
+import { registerRoutes } from './routes/api';
 
 dotenv.config();
 const baseUrl = process.env.BASE_URL;
@@ -13,7 +13,7 @@ app.use(express.json());
 
 registerRoutes(app);
 
-app.listen( port, () => {
-    // tslint:disable-next-line:no-console
-    console.log( `server started at ${ baseUrl }:${ port }` );
-} );
+app.listen(port, () => {
+  // tslint:disable-next-line:no-console
+  console.log(`server started at ${baseUrl}:${port}`);
+});

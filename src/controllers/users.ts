@@ -1,12 +1,12 @@
-import { UsersService } from "../services/users";
-import { IUserRepository } from "../models/user/user-repository";
-import { UserInMemoryData } from "../data/user-inmem-repository";
+import { UsersService } from '../services/users';
+import { UserRepository } from '../models/user/user-repository';
+import { UserInMemoryData } from '../data/user-inmem-repository';
 import { Response, Request } from 'express';
 
 export class UserController {
   private userSvc: UsersService;
 
-  constructor(userRepo: IUserRepository = new UserInMemoryData()) {
+  constructor(userRepo: UserRepository = new UserInMemoryData()) {
     if (!this.userSvc) {
       this.userSvc = new UsersService(userRepo);
     }
@@ -19,7 +19,7 @@ export class UserController {
     } catch (err) {
       res.json({ error: err.message || err });
     }
-  }
+  };
 
   getUser = async (req: any, res: any) => {
     try {
@@ -29,6 +29,5 @@ export class UserController {
     } catch (err) {
       res.json({ error: err.message || err });
     }
-  }
-
+  };
 }

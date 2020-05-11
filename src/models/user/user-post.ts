@@ -1,4 +1,4 @@
 export class UserPost {
-    name: string;
-    favoriteFood?: string
+  name: string;
+  favoriteFood?: string;
 }
