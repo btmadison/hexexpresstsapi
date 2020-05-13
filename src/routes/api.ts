@@ -1,8 +1,10 @@
 import * as express from 'express';
 
-import { initUserApi } from './users';
-import { UserInMemoryData } from '../data/user-inmem-repository';
+import UserApi from './users';
+import UserInMemoryData from '../data/user-inmem-repository';
 
-export const registerRoutes = (app: express.Application) => {
-  initUserApi(app, new UserInMemoryData());
-};
+export default class ApiRouter {
+  constructor(private app: express.Application) {
+    const userApi = new UserApi(this.app, new UserInMemoryData());
+  }
+}

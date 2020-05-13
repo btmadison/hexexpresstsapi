@@ -1,8 +1,9 @@
-import { User } from '../../models/user/user';
-import { UserRepository } from '../../models/user/user-repository';
+import User from '../../models/user/user';
+import UserRepository from '../../models/user/user-repository';
 
-export class UserInMemoryData implements UserRepository {
+export default class UserInMemoryData implements UserRepository {
   private users: User[];
+
   private inmemDBIdPrefix = 'DB_';
 
   constructor() {
@@ -39,7 +40,7 @@ export class UserInMemoryData implements UserRepository {
       if (user) {
         resolve(this.removeDBPrefix(user));
       }
-      reject('User Not Found');
+      reject(Error('User Not Found'));
     });
   };
 
@@ -51,7 +52,7 @@ export class UserInMemoryData implements UserRepository {
         this.users.concat(dbUserToAdd);
         resolve(newUser);
       }
-      reject('User Already Exists');
+      reject(Error('User Already Exists'));
     });
   };
 
@@ -63,7 +64,7 @@ export class UserInMemoryData implements UserRepository {
         foundUser = dbUserToUpdate;
         resolve(user);
       }
-      reject('User Not Found');
+      reject(Error('User Not Found'));
     });
   };
 

@@ -1,6 +1,6 @@
-import { UserInMemoryData } from '../data/user-inmem-repository';
-import { UserRepository } from '../models/user/user-repository';
-import { UsersService } from './users';
+import UserInMemoryData from '../data/user-inmem-repository';
+import UserRepository from '../models/user/user-repository';
+import UsersService from './users';
 
 jest.mock('../data/user-inmem-repository');
 

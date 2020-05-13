@@ -1,8 +1,9 @@
-import { User } from '../models/user/user';
-import { UserRepository } from '../models/user/user-repository';
+import User from '../models/user/user';
+import UserRepository from '../models/user/user-repository';
 
-export class UsersService {
+export default class UsersService {
   private userStore: UserRepository;
+
   constructor(userStore: UserRepository) {
     if (!this.userStore) {
       this.userStore = userStore;
@@ -10,10 +11,10 @@ export class UsersService {
   }
 
   async getAll(): Promise<User[]> {
-    return await this.userStore.getAll();
+    return this.userStore.getAll();
   }
 
   async get(userId: string): Promise<User> {
-    return await this.userStore.get(userId);
+    return this.userStore.get(userId);
   }
 }
