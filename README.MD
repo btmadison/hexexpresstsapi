@@ -52,4 +52,4 @@ SERVER_PORT=8080
 ### Commands:
 - run `npm run dev` to run dev server with live reload
 - run `npm run test` to run unit tests
-
+- run `npm run lint` to lint files and autofix linting and prettier issues that it can

@@ -7,11 +7,10 @@ export default class UserApi {
   userController: UserController;
 
   constructor(private app: express.Application, private data: UserRepository) {
-    this.initUserApi();
+    this.userController = new UserController(this.data);
   }
 
-  initUserApi = () => {
-    this.userController = new UserController(this.data);
+  initRoutes = () => {
     this.app.get(`/users`, this.userController.listUsers);
     this.app.get(`/users/:id`, this.userController.getUser);
   };
