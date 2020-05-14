@@ -47,6 +47,7 @@ First, clone repo and run npm install from project root.  After this, create a .
 NODE_ENV=development
 BASE_URL=http://localhost
 SERVER_PORT=8080
+LOCAL_DB=TRUE ## use in memory db, false use json server (launch separately with start-api)
 ```
 
 ### Commands:

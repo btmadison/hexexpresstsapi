@@ -69,7 +69,7 @@ export default class UserInMemoryData implements UserRepository {
   };
 
   delete = (userId: string) => {
-    return new Promise<'OK'>((resolve) => {
+    return new Promise<string>((resolve) => {
       this.users = this.users.filter((user) => user.id !== this.inmemDBIdPrefix + userId);
       resolve('OK');
     });

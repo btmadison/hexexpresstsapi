@@ -1,0 +1,42 @@
+{
+    "users": [
+        {
+            "id": "ABC111",
+            "name": "Jolly St. Nick",
+            "favoriteFood": "Canfy Canes",
+            "active": true
+        },
+        {
+            "id": "ABC112",
+            "name": "Mille Smith",
+            "favoriteFood": "Eggplant",
+            "active": true
+        },
+        {
+            "id": "ABC113",
+            "name": "Mark Horace",
+            "favoriteFood": "Ghost Pepper",
+            "active": true
+        }
+    ],
+    "capabilities": [
+        {
+            "id": "ABC111",
+            "capabilities": [
+                "canFoo"
+            ]
+        },
+        {
+            "id": "ABC112",
+            "capabilities": [
+                "canFoo"
+            ]
+        },
+        {
+            "id": "ABC113",
+            "capabilities": [
+                "canFoo", "canBar", "canEat"
+            ]
+        }
+    ]
+}

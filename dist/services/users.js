@@ -1,52 +1,30 @@
-'use strict';
-const __awaiter =
-  (this && this.__awaiter) ||
-  function (thisArg, _arguments, P, generator) {
-    function adopt(value) {
-      return value instanceof P
-        ? value
-        : new P(function (resolve) {
-            resolve(value);
-          });
-    }
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
-      function fulfilled(value) {
-        try {
-          step(generator.next(value));
-        } catch (e) {
-          reject(e);
-        }
-      }
-      function rejected(value) {
-        try {
-          step(generator['throw'](value));
-        } catch (e) {
-          reject(e);
-        }
-      }
-      function step(result) {
-        result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-      }
-      step((generator = generator.apply(thisArg, _arguments || [])).next());
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
-  };
-Object.defineProperty(exports, '__esModule', { value: true });
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 class UsersService {
-  constructor(userStore) {
-    if (!this.userStore) {
-      this.userStore = userStore;
+    constructor(userStore) {
+        if (!this.userStore) {
+            this.userStore = userStore;
+        }
     }
-  }
-  getAll() {
-    return __awaiter(this, void 0, void 0, function* () {
-      return yield this.userStore.getAll();
-    });
-  }
-  get(userId) {
-    return __awaiter(this, void 0, void 0, function* () {
-      return yield this.userStore.get(userId);
-    });
-  }
+    getAll() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.userStore.getAll();
+        });
+    }
+    get(userId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.userStore.get(userId);
+        });
+    }
 }
-exports.UsersService = UsersService;
+exports.default = UsersService;
 //# sourceMappingURL=users.js.map

@@ -59,14 +59,14 @@ class UserInMemoryData {
         if (!this.users) {
             this.users = [
                 {
-                    id: 'DB_user-1',
+                    id: 'DB_MOCK_user-1',
                     name: 'Bob Jones',
                     favoriteFood: 'lettuce',
                     capabilities: ['canFoo', 'canBar'],
                     active: true,
                 },
                 {
-                    id: 'DB_user-2',
+                    id: 'DB_MOCK_user-2',
                     name: 'Wendy Williams',
                     favoriteFood: 'fried fish',
                     capabilities: ['canFoo'],

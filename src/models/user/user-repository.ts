@@ -5,5 +5,5 @@ export default interface UserRepository {
   update: (user: User) => Promise<User>;
   get: (userId: string) => Promise<User>;
   getAll: () => Promise<User[]>;
-  delete: (userId: string) => Promise<'OK'>;
+  delete: (userId: string) => Promise<string>;
 }
